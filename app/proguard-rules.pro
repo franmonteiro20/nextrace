@@ -1,0 +1,1 @@
+# NextRace - regras ProGuard
