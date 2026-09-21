@@ -7,11 +7,11 @@ android {
     compileSdk 36
 
     defaultConfig {
-        applicationId "com.nextrace.app"
+        applicationId "br.com.franmonteiro.nextrace"
         minSdk 24
         targetSdk 36
-        versionCode 7
-        versionName "1.3.1"
+        versionCode 8
+        versionName "1.4.0"
     }
 
     buildTypes {
