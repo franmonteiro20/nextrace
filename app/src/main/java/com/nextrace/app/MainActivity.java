@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -15,7 +14,7 @@ import android.webkit.WebViewClient;
 
 public class MainActivity extends Activity {
     private WebView webView;
-    private static final String APP_URL = "https://franmonteiro20.github.io/nextrace/?v=1.3.0";
+    private static final String APP_URL = "file:///android_asset/index.html";
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -32,7 +31,7 @@ public class MainActivity extends Activity {
         s.setDomStorageEnabled(true);
         s.setDatabaseEnabled(true);
         s.setCacheMode(WebSettings.LOAD_DEFAULT);
-        s.setAllowFileAccess(false);
+        s.setAllowFileAccess(true);
         s.setAllowContentAccess(false);
         s.setBuiltInZoomControls(false);
         s.setDisplayZoomControls(false);
@@ -44,7 +43,8 @@ public class MainActivity extends Activity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, android.webkit.WebResourceRequest request) {
                 Uri uri = request.getUrl();
-                if ("franmonteiro20.github.io".equals(uri.getHost())) return false;
+                String scheme = uri.getScheme();
+                if ("file".equals(scheme) || "about".equals(scheme) || "blob".equals(scheme)) return false;
                 try {
                     startActivity(new Intent(Intent.ACTION_VIEW, uri));
                 } catch (Exception ignored) {}
