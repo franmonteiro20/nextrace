@@ -15,7 +15,7 @@ import android.webkit.WebViewClient;
 
 public class MainActivity extends Activity {
     private WebView webView;
-    private static final String APP_URL = "https://franmonteiro20.github.io/nextrace/?v=1.1.1";
+    private static final String APP_URL = "https://franmonteiro20.github.io/nextrace/?v=1.1.2";
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
