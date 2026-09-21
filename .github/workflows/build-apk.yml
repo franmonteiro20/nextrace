@@ -1,4 +1,4 @@
-name: Build NextRace unsigned APK
+name: Build NextRace Play Bundle
 
 on:
   push:
@@ -29,22 +29,22 @@ jobs:
         shell: bash
         run: |
           echo "y" | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
-          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-35" "build-tools;35.0.0"
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;35.0.0"
 
-      - name: Gradle 8.9
+      - name: Gradle 8.11.1
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.9'
+          gradle-version: '8.11.1'
 
-      - name: Build unsigned release APK
-        run: gradle --no-daemon :app:assembleRelease
+      - name: Build unsigned App Bundle
+        run: gradle --no-daemon :app:bundleRelease
 
-      - name: Rename unsigned APK
-        run: cp app/build/outputs/apk/release/app-release-unsigned.apk NextRace-v1.2.0-unsigned.apk
+      - name: Rename bundle
+        run: cp app/build/outputs/bundle/release/app-release.aab NextRace-v1.3.0-unsigned.aab
 
-      - name: Upload unsigned APK
+      - name: Upload unsigned bundle
         uses: actions/upload-artifact@v4
         with:
-          name: NextRace-unsigned-v1.2.0
-          path: NextRace-v1.2.0-unsigned.apk
+          name: NextRace-Play-v1.3.0-unsigned
+          path: NextRace-v1.3.0-unsigned.aab
           if-no-files-found: error
