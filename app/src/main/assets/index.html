@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07111f">
+<meta name="description" content="NextRace — corrida, força e próxima prova em um único ciclo.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>NextRace</title>
+<meta name="nextrace-version" content="1.3.1">
+<style>
+:root{--bg:#07111f;--panel:#0d1b2d;--panel2:#12243a;--line:#223a55;--text:#f3f7fb;--muted:#91a5ba;--blue:#4fa3ff;--cyan:#5de4d3;--orange:#ffad4a;--red:#ff6577;--green:#66d39e;--r:20px}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(160deg,#06101d,#091a2c 45%,#07111f);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh}.app{max-width:760px;margin:auto;min-height:100vh;padding-bottom:92px}.top{position:sticky;top:0;z-index:5;padding:16px 18px;background:rgba(7,17,31,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:11px;align-items:center}.mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#04101a;font-weight:900;display:grid;place-items:center}.brand b{font-size:20px}.brand small{display:block;color:var(--muted);font-size:11px}.install{border:1px solid var(--line);background:transparent;color:var(--text);border-radius:12px;padding:9px 12px}.hidden{display:none!important}main{padding:18px}.hero{background:radial-gradient(circle at 85% 0,#153a62,transparent 42%),linear-gradient(145deg,#10263e,#0b1828);border:1px solid #1d3855;border-radius:26px;padding:22px;box-shadow:0 22px 55px rgba(0,0,0,.26)}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--cyan);font-weight:800}.hero h1{margin:8px 0 3px;font-size:30px}.muted{color:var(--muted)}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:18px}.stat{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:12px}.stat b{font-size:17px;display:block}.stat span{font-size:10px;color:var(--muted)}.section-title{display:flex;justify-content:space-between;align-items:center;margin:22px 2px 10px}.section-title h2{font-size:17px;margin:0}.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:16px;margin:10px 0}.work{display:flex;gap:13px;align-items:flex-start}.dot{width:11px;height:11px;border-radius:50%;margin-top:6px;flex:none}.quality{background:var(--orange)}.easy{background:var(--green)}.long{background:var(--blue)}.strength{background:#a88cff}.race{background:var(--red)}.work h3{font-size:15px;margin:0 0 4px}.work p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}.work .date{font-size:11px;color:#b9caDA;margin-top:6px}.grow{flex:1}.badge{font-size:10px;border:1px solid var(--line);padding:4px 7px;border-radius:999px;color:var(--muted)}button{font:inherit;cursor:pointer}.btn{border:0;border-radius:14px;padding:11px 14px;font-weight:800;background:linear-gradient(135deg,var(--blue),#2d7fda);color:white}.btn.alt{background:var(--panel2);border:1px solid var(--line)}.btn.danger{background:#4a1b25;color:#ffb9c2}.btn.small{padding:7px 10px;font-size:12px}.nav{position:fixed;bottom:0;left:0;right:0;z-index:10;background:rgba(7,17,31,.96);backdrop-filter:blur(16px);border-top:1px solid #203247;display:flex;justify-content:center;padding-bottom:max(8px,env(safe-area-inset-bottom))}.navin{width:min(760px,100%);display:grid;grid-template-columns:repeat(5,1fr)}.nav button{background:none;border:0;color:#71879d;padding:11px 2px 7px;font-size:11px}.nav button span{display:block;font-size:19px;margin-bottom:2px}.nav button.on{color:var(--cyan)}.week{margin-bottom:18px}.weekhead{display:flex;justify-content:space-between;align-items:end;margin:14px 2px 6px}.weekhead b{font-size:15px}.weekhead span{font-size:11px;color:var(--muted)}.progress{height:8px;border-radius:999px;background:#14273b;overflow:hidden}.progress i{height:100%;display:block;background:linear-gradient(90deg,var(--blue),var(--cyan))}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metric{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:15px}.metric strong{font-size:24px}.metric small{display:block;color:var(--muted);margin-top:3px}.empty{text-align:center;color:var(--muted);padding:30px 10px}.modal{border:1px solid var(--line);border-radius:24px;background:#0a1727;color:var(--text);width:min(92vw,560px);padding:0;box-shadow:0 25px 80px #0009}.modal::backdrop{background:#020812cc;backdrop-filter:blur(4px)}.modalbox{padding:20px}.modal h2{margin:0 0 14px}.field{margin:11px 0}.field label{display:block;font-size:11px;color:var(--muted);margin-bottom:5px}.field input,.field select,.field textarea{width:100%;border:1px solid #29425e;border-radius:13px;background:#081421;color:var(--text);padding:11px 12px;font:inherit}.field textarea{min-height:78px}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}.actions{display:flex;gap:9px;justify-content:flex-end;margin-top:18px}.notice{border-left:3px solid var(--orange);background:#211a12;padding:12px;border-radius:10px;font-size:12px;color:#f0c892;line-height:1.45}.ok{border-color:var(--green);background:#10271f;color:#a7ebc9}.pill{display:inline-flex;padding:5px 8px;border-radius:999px;background:#102a3c;color:#8fdcff;font-size:11px;margin:3px 4px 3px 0}.racecard h3{margin:4px 0}.racecard .goal{font-size:24px;font-weight:900}.sep{border:0;border-top:1px solid var(--line);margin:15px 0}.dangertext{color:#ff9dac}@media(max-width:430px){.stats{grid-template-columns:1fr 1fr}.stats .stat:last-child{grid-column:span 2}.formrow,.grid2{grid-template-columns:1fr}.hero h1{font-size:26px}}
+
+.exercisegrid{display:grid;gap:12px;margin-top:13px}
+.excard{border:1px solid var(--line);background:#0b1b2e;border-radius:18px;padding:12px}
+.exhead{display:grid;grid-template-columns:88px 1fr;gap:12px;align-items:start}
+.expic{width:88px;height:88px;border-radius:16px;background:linear-gradient(145deg,#132b47,#091725);display:grid;place-items:center;border:1px solid #25425f}
+.expic svg{width:78px;height:78px}.expic .body{fill:none;stroke:#75d7ff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.expic .floor{stroke:#3a5875;stroke-width:3;stroke-linecap:round}
+.exmeta h4{margin:0 0 4px;font-size:15px}.expres{font-size:12px;font-weight:800;color:#e5eef8;margin-bottom:6px}.extip{margin:0;color:var(--muted);font-size:12px;line-height:1.42}
+.exfields{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:11px}.exfields .full{grid-column:1/-1}
+.muscle-note{border-left:3px solid #a88cff;background:#171329;padding:11px 12px;border-radius:10px;color:#d9cfff;font-size:12px;line-height:1.45;margin:12px 0}
+@media(max-width:430px){.exhead{grid-template-columns:1fr}.expic{width:100%;height:116px}.expic svg{width:108px;height:108px}.exfields{grid-template-columns:1fr}.exfields .full{grid-column:auto}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top"><div class="brand"><div class="mark">NR</div><div><b>NextRace</b><small>treine para o que vem depois</small></div></div><button id="install" class="install hidden">Instalar</button></header>
+<main id="view"></main>
+<nav class="nav"><div class="navin">
+<button data-r="home" class="on"><span>⌂</span>Hoje</button><button data-r="plan"><span>▦</span>Plano</button><button data-r="progress"><span>↗</span>Evolução</button><button data-r="races"><span>⚑</span>Provas</button><button data-r="profile"><span>◎</span>Perfil</button>
+</div></nav>
+</div>
+<dialog id="dlg" class="modal"></dialog>
+<script>
+(function(){
+'use strict';
+var K='nextrace_v1',DAY=86400000;
+function iso(d){d=new Date(d);d.setHours(12,0,0,0);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function pdate(s){var a=s.split('-').map(Number);return new Date(a[0],a[1]-1,a[2],12)}
+function add(s,n){var d=pdate(s);d.setDate(d.getDate()+n);return iso(d)}
+function fmt(s){return pdate(s).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'}).replace('.','')}
+function days(a,b){return Math.ceil((pdate(b)-pdate(a))/DAY)}
+function tsec(t){var a=(t||'').split(':').map(Number);if(a.some(isNaN))return 0;return a.length===3?a[0]*3600+a[1]*60+a[2]:a[0]*60+a[1]}
+function pace(sec){sec=Math.round(sec);return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0')}
+function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+var types={quality:'Qualidade',easy:'Leve',long:'Longão',strength:'Força',race:'Prova'};
+var main='Agachamento 3×6–8 • Stiff 3×8 • Afundo 3×8/perna • Panturrilha em pé 3×12–15 • Abdução 2×15 • Prancha 3×45 s';
+var comp='Leg press 3×8–10 • Hip thrust 3×8–10 • Búlgaro 2×8/perna • Mesa flexora 3×10 • Panturrilha sentado 3×12–15 • Pallof press 3×10/lado';
+var ws=[
+['2026-09-21','4×1 km @ 5:20–5:30','7 km leve','14 km @ 5:50–6:20'],
+['2026-09-28','5×1 km @ 5:15–5:25','8 km leve','15 km @ 5:50–6:20'],
+['2026-10-05','3×2 km @ 5:15–5:20','7 km leve','16 km @ 5:50–6:20'],
+['2026-10-12','6×800 m @ 5:00–5:10','8 km leve','13 km confortável — redução'],
+['2026-10-19','4×2 km @ 5:10–5:15','8 km leve','17 km: 12 km confortável + 5 km @ 5:20–5:15'],
+['2026-10-26','3×3 km @ 5:05–5:10','7 km leve','18–19 km: 13–14 km confortável + 4–5 km @ 5:10–5:05'],
+['2026-11-02','5–6 km progressivos, terminando ~5:00','6 km bem leve','14 km confortável'],
+['2026-11-09','4×800 m @ ~5:00, sem forçar','4–5 km leve + 3 acelerações','PROVA — 21,1 km']
+];
+function seed(){
+ var out=[];
+ ws.forEach(function(w,i){var n=i+1,taper=n===8;
+  out.push({id:'s'+n+'t',date:add(w[0],1),week:n,type:'strength',title:taper?'Mobilidade + core leve':'Força principal',summary:taper?'Sem musculação pesada de pernas':main,status:'planned'});
+  out.push({id:'s'+n+'q',date:add(w[0],2),week:n,type:'quality',title:'Treino de qualidade',summary:w[1]+' • 10–15 min trote antes/depois • recuperação 2–3 min',status:'planned'});
+  out.push({id:'s'+n+'h',date:add(w[0],3),week:n,type:'strength',title:taper?'Descanso ativo':'Força complementar',summary:taper?'Mobilidade leve; preservar as pernas':comp,status:'planned'});
+  out.push({id:'s'+n+'e',date:add(w[0],5),week:n,type:'easy',title:'Corrida leve',summary:w[2]+' • ritmo conversável',status:'planned'});
+  out.push({id:'s'+n+'l',date:add(w[0],6),week:n,type:taper?'race':'long',title:taper?'Meia Maratona — prova':'Longão',summary:w[3]+(n>=5&&!taper?' • treinar gel/hidratação':''),status:'planned'});
+ });return out
+}
+function base(){return {profile:{name:'Corredor',weeklyKm:30,longRunKm:14},races:[{id:'half26',name:'Meia Maratona',date:'2026-11-15',distance:21.1,goal:'1:45:30',status:'active'}],active:'half26',workouts:seed().map(function(w){w.raceId='half26';return w}),history:[]}}
+var data;try{data=JSON.parse(localStorage.getItem(K))||base()}catch(e){data=base()}
+if(!data.workouts||!data.races)data=base();
+function save(){localStorage.setItem(K,JSON.stringify(data))}
+function race(){return data.races.find(function(x){return x.id===data.active})||data.races[0]}
+function inferRaceIdForWorkouts(list){
+ var raceSession=list.find(function(w){return w.type==='race'});
+ if(raceSession){
+  var exact=data.races.find(function(r){return r.date===raceSession.date});
+  if(exact)return exact.id;
+  var closest=data.races.slice().sort(function(a,b){return Math.abs(days(raceSession.date,a.date))-Math.abs(days(raceSession.date,b.date))})[0];
+  if(closest)return closest.id;
+ }
+ return data.active||(data.races[0]&&data.races[0].id);
+}
+function ensureWorkoutRaceIds(){
+ var missing=data.workouts.filter(function(w){return !w.raceId});
+ if(!missing.length)return;
+ var inferred=inferRaceIdForWorkouts(missing);
+ missing.forEach(function(w){w.raceId=inferred});
+ save();
+}
+function activeWorkouts(){
+ var r=race();if(!r)return [];
+ var list=data.workouts.filter(function(w){return w.raceId===r.id});
+ if(!list.length){
+  list=planForRace(r);
+  data.workouts=data.workouts.concat(list);
+  save();
+ }
+ return list;
+}
+function done(){return activeWorkouts().filter(function(w){return w.status==='done'}).length}
+function loggedKm(){return activeWorkouts().reduce(function(a,w){return a+(w.log&&Number(w.log.km)||0)},0)}
+function todayISO(){return iso(new Date())}
+function futureWork(){var t=todayISO(),aw=activeWorkouts(),arr=aw.filter(function(w){return w.date>=t&&w.status!=='done'}).sort(function(a,b){return a.date.localeCompare(b.date)});return arr[0]||aw.slice().sort(function(a,b){return b.date.localeCompare(a.date)})[0]}
+function workCard(w){
+ return '<div class="card work" data-id="'+w.id+'"><span class="dot '+w.type+'"></span><div class="grow"><div class="row"><h3>'+esc(w.title)+'</h3><span class="badge">'+types[w.type]+'</span></div><p>'+esc(w.summary)+'</p><div class="date">'+fmt(w.date)+' • semana '+w.week+(w.status==='done'?' • ✓ concluído':'')+'</div></div><button class="btn small alt openwork" data-id="'+w.id+'">'+(w.status==='done'?'Ver':'Registrar')+'</button></div>'
+}
+var view=document.getElementById('view'),route='home',dlg=document.getElementById('dlg');
+function nav(){
+ document.querySelectorAll('.nav button').forEach(function(b){b.classList.toggle('on',b.dataset.r===route)})
+ if(route==='home')home();if(route==='plan')plan();if(route==='progress')progress();if(route==='races')races();if(route==='profile')profile()
+}
+function raceStrategy(r){
+ var d=Number(r.distance),target=tsec(r.goal)/d,t=pace(target);
+ if(d<=5) return {title:'Estratégia dos 5 km',text:'Km 1: sair controlado, cerca de 5–10 s/km mais lento que '+t+'. Km 2–4: estabilizar próximo de '+t+'/km. Km final: aumentar progressivamente se houver margem.'};
+ if(d<=10) return {title:'Estratégia dos 10 km',text:'Km 1–2: sair 5–10 s/km mais controlado que '+t+'. Km 3–8: buscar estabilidade próximo de '+t+'/km. Km 9–10: sustentar e acelerar apenas se ainda houver controle.'};
+ if(d<=21.1) return {title:'Estratégia da meia maratona',text:'Primeiros 5 km: começar cerca de 5–10 s/km mais controlado que '+t+'. Trecho central: aproximar gradualmente de '+t+'/km. Últimos 5–6 km: sustentar ou acelerar somente se estiver bem. Use apenas hidratação e carboidrato já testados.'};
+ return {title:'Estratégia da maratona',text:'Primeiros 5–10 km: ritmo deliberadamente controlado, cerca de 5–10 s/km mais lento que '+t+'. Parte central: estabilizar próximo do ritmo-alvo. Últimos 10 km: decidir pelo esforço e pela reserva energética. Hidratação e carboidrato devem ter sido testados nos longões.'};
+}
+function home(){
+ var r=race(),aw=activeWorkouts(),n=futureWork(),left=Math.max(0,days(todayISO(),r.date)),strategy=raceStrategy(r);
+ var wk=n?n.week:(aw.length?Math.max.apply(null,aw.map(function(w){return w.week||1})):1),weekDone=aw.filter(function(w){return w.week===wk&&w.status==='done'}).length,total=aw.filter(function(w){return w.week===wk}).length;
+ view.innerHTML='<section class="hero"><div class="eyebrow">PRÓXIMA PROVA • '+fmt(r.date)+'</div><h1>'+esc(r.name)+'</h1><div class="muted">'+left+' dias para '+String(r.distance).replace('.',',')+' km</div><div class="stats"><div class="stat"><b>'+esc(r.goal)+'</b><span>meta</span></div><div class="stat"><b>'+pace(tsec(r.goal)/r.distance)+'/km</b><span>ritmo-alvo</span></div><div class="stat"><b>'+weekDone+'/'+total+'</b><span>treinos da semana</span></div></div></section>'+
+ '<div class="section-title"><h2>Próximo treino</h2><span class="muted">Semana '+wk+'</span></div>'+(n?workCard(n):'<div class="card">Ciclo concluído.</div>')+
+ '<div class="section-title"><h2>Resumo</h2></div><div class="grid2"><div class="metric"><strong>'+done()+'</strong><small>treinos concluídos</small></div><div class="metric"><strong>'+loggedKm().toFixed(1).replace('.',',')+'</strong><small>km registrados</small></div></div>'+
+ '<div class="card"><b>'+esc(strategy.title)+'</b><p class="muted">'+esc(strategy.text)+'</p></div>';
+ bindWork()
+}
+
+function plan(){
+ var aw=activeWorkouts(),html='<div class="section-title"><h2>Plano completo</h2><span class="muted">'+aw.length+' sessões</span></div>';
+ var weeks=[...new Set(aw.map(function(w){return w.week}))];
+ weeks.forEach(function(k){var a=aw.filter(function(w){return w.week===k}),d=a.filter(function(w){return w.status==='done'}).length;html+='<div class="week"><div class="weekhead"><b>Semana '+k+'</b><span>'+d+'/'+a.length+' concluídos</span></div><div class="progress"><i style="width:'+(100*d/a.length)+'%"></i></div>'+a.map(workCard).join('')+'</div>'});
+ view.innerHTML=html;bindWork()
+}
+
+function progress(){
+ var aw=activeWorkouts(),logs=aw.filter(function(w){return w.log}).sort(function(a,b){return b.date.localeCompare(a.date)});
+ var avg=logs.length?(logs.reduce(function(a,w){return a+Number(w.log.rpe||0)},0)/logs.length).toFixed(1):'—';
+ var maxLong=Math.max(data.profile.longRunKm||0,...logs.filter(function(w){return w.type==='long'||w.type==='race'}).map(function(w){return Number(w.log.km)||0}));
+ var strengthCount=logs.filter(function(w){return w.type==='strength'&&w.status==='done'}).length;
+ view.innerHTML='<div class="section-title"><h2>Evolução</h2></div><div class="grid2"><div class="metric"><strong>'+loggedKm().toFixed(1).replace('.',',')+'</strong><small>km registrados</small></div><div class="metric"><strong>'+maxLong.toFixed(1).replace('.',',')+'</strong><small>maior longão</small></div><div class="metric"><strong>'+avg+'</strong><small>RPE médio</small></div><div class="metric"><strong>'+strengthCount+'</strong><small>treinos de força</small></div></div>'+
+ (logs.length?'<div class="section-title"><h2>Últimos registros</h2></div>'+logs.slice(0,12).map(function(w){return '<div class="card"><div class="row"><b>'+fmt(w.date)+' • '+esc(w.title)+'</b><span class="badge">RPE '+esc(w.log.rpe||'—')+'</span></div><p class="muted">'+logPrimary(w)+' • '+logSecondary(w)+(w.log.pain?' • <span class="dangertext">dor/desconforto</span>':'')+'</p></div>'}).join(''):'<div class="empty">Registre os treinos para ver a evolução.</div>')
+}
+function races(){
+ var r=race();
+ view.innerHTML='<div class="section-title"><h2>Provas</h2><button id="newrace" class="btn small">+ Nova prova</button></div>'+
+ data.races.slice().sort(function(a,b){return a.date.localeCompare(b.date)}).map(function(x){return '<div class="card racecard"><div class="eyebrow">'+(x.id===data.active?'PROVA ATIVA':'PROVA CADASTRADA')+'</div><h3>'+esc(x.name)+'</h3><div class="goal">'+esc(x.goal)+'</div><div class="muted">'+fmt(x.date)+' • '+String(x.distance).replace('.',',')+' km • '+pace(tsec(x.goal)/x.distance)+'/km</div>'+(x.id!==data.active?'<p><button class="btn small alt activate" data-id="'+x.id+'">Tornar ativa</button></p>':'')+'</div>'}).join('');
+ document.getElementById('newrace').onclick=newRace;
+ document.querySelectorAll('.activate').forEach(function(b){b.onclick=function(){data.active=b.dataset.id;save();repairActivePlan();nav()}})
+}
+function profile(){
+ view.innerHTML='<div class="section-title"><h2>Perfil de treino</h2></div><div class="card"><div class="field"><label>Nome</label><input id="pname" value="'+esc(data.profile.name)+'"></div><div class="formrow"><div class="field"><label>Volume habitual (km/semana)</label><input id="pkm" type="number" min="5" value="'+data.profile.weeklyKm+'"></div><div class="field"><label>Longão atual (km)</label><input id="plong" type="number" min="3" value="'+data.profile.longRunKm+'"></div></div><button id="savep" class="btn">Salvar perfil</button></div>'+
+ '<div class="card"><b>Dados</b><p class="muted">Os registros ficam neste aparelho. Faça backup antes de trocar de celular ou limpar o navegador.</p><div class="row"><button id="backup" class="btn small alt">Exportar backup</button><button id="reset" class="btn small danger">Apagar dados</button></div></div>';
+ document.getElementById('savep').onclick=function(){data.profile.name=document.getElementById('pname').value||'Corredor';data.profile.weeklyKm=Number(document.getElementById('pkm').value)||30;data.profile.longRunKm=Number(document.getElementById('plong').value)||14;save();alert('Perfil salvo.')};
+ document.getElementById('backup').onclick=function(){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));a.download='nextrace-backup.json';a.click();URL.revokeObjectURL(a.href)};
+ document.getElementById('reset').onclick=function(){if(confirm('Apagar todos os dados do NextRace neste aparelho?')){localStorage.removeItem(K);data=base();save();route='home';nav()}}
+}
+
+function strengthExercises(w){
+ var mainList=[['Agachamento','3×6–8','squat'],['Stiff','3×8','hinge'],['Afundo','3×8 cada perna','lunge'],['Panturrilha em pé','3×12–15','calf'],['Abdução','2×15','abduction'],['Prancha','3×45 s','plank']];
+ var compList=[['Leg press','3×8–10','legpress'],['Hip thrust','3×8–10','hipthrust'],['Búlgaro','2×8 cada perna','bulgarian'],['Mesa flexora','3×10','curl'],['Panturrilha sentado','3×12–15','calfseat'],['Pallof press','3×10 cada lado','pallof']];
+ if(/mobilidade|descanso ativo/i.test(w.title)||/sem pernas pesadas/i.test(w.summary)) return [['Mobilidade dinâmica','10–15 min','mobility'],['Prancha','2×30–40 s','plank'],['Pallof press','2×10/lado','pallof']];
+ return /complementar/i.test(w.title)?compList:mainList;
+}
+function exerciseTip(n){
+ var tips={
+ 'Agachamento':'Pés na largura dos ombros, peito aberto e descida controlada. Os joelhos acompanham a ponta dos pés.',
+ 'Stiff':'Leve o quadril para trás, mantenha a coluna neutra e sinta o posterior da coxa — não a lombar.',
+ 'Afundo':'Passo firme, tronco estável e joelho da frente alinhado ao pé.',
+ 'Panturrilha em pé':'Suba completamente e desça devagar, sem usar impulso.',
+ 'Abdução':'Quadril estável e movimento controlado, focando no glúteo médio.',
+ 'Prancha':'Contraia abdômen e glúteos, mantendo lombar neutra e quadril sem cair.',
+ 'Leg press':'Pés apoiados, lombar no encosto e extensão sem travar os joelhos.',
+ 'Hip thrust':'Queixo levemente recolhido; suba contraindo glúteos sem hiperestender a lombar.',
+ 'Búlgaro':'Priorize equilíbrio, controle a amplitude e mantenha o joelho alinhado.',
+ 'Mesa flexora':'Suba e desça a carga com controle, sem chutar o peso.',
+ 'Panturrilha sentado':'Amplitude completa, breve pausa no topo e descida controlada.',
+ 'Pallof press':'Tronco firme; empurre os braços à frente sem deixar o corpo girar.',
+ 'Mobilidade dinâmica':'Movimentos amplos, fluidos e sem dor, apenas para preparar o corpo.'
+ };return tips[n]||'Movimento controlado, postura estável e carga compatível com boa execução.';
+}
+function exerciseSvg(k){
+ var a={
+ squat:'<circle cx="58" cy="18" r="9"/><path d="M58 28v24M34 40h48M58 52L44 69 31 91M58 52l15 16 14 23"/>',
+ hinge:'<circle cx="53" cy="18" r="9"/><path d="M55 28l17 23 2 20-10 22M72 51l15 10M70 48L49 58M74 71l14 20"/>',
+ lunge:'<circle cx="55" cy="18" r="9"/><path d="M55 28v25M55 40L40 53M55 40l17 7M55 53L43 70 34 92M55 53l18 8 14 30"/>',
+ calf:'<circle cx="58" cy="18" r="9"/><path d="M58 28v30M58 40L42 54M58 40l16 14M58 58L48 86M58 58l10 28M42 91l10-7M64 91l10-7"/>',
+ abduction:'<circle cx="58" cy="18" r="9"/><path d="M58 28v30M58 40L42 51M58 40l17 11M58 58L47 86M58 58l22 21"/><path d="M86 70q10 6 0 12"/>',
+ plank:'<circle cx="26" cy="54" r="6"/><path d="M32 55h52l9-6M46 55L36 82M68 55l12 28"/>',
+ legpress:'<path d="M20 27v63M32 77l30-19 18 12M55 50L36 42"/><circle cx="70" cy="49" r="8"/><path d="M89 33v54M89 33h10M89 87h10"/>',
+ hipthrust:'<circle cx="40" cy="29" r="7"/><path d="M46 34l12 13 20 8M58 47l5 25M58 47l20 25M25 72h70M49 41h30"/>',
+ bulgarian:'<circle cx="55" cy="18" r="9"/><path d="M55 28v25M55 40L40 54M55 40l17 7M55 53L43 71 35 92M55 53l18 9 16 5M85 67h13"/>',
+ curl:'<rect x="18" y="42" width="55" height="15" rx="7"/><circle cx="82" cy="49" r="8"/><path d="M44 50l19 20 14-8M52 48L41 34"/><circle cx="36" cy="29" r="7"/>',
+ calfseat:'<rect x="23" y="70" width="27" height="8" rx="4"/><circle cx="31" cy="31" r="7"/><path d="M35 37l10 11M36 69V46h22l16 9M58 46v26h19M68 64h18"/>',
+ pallof:'<path d="M34 21v74"/><circle cx="58" cy="18" r="9"/><path d="M58 28v30M58 58L48 88M58 58l10 30M58 41h31"/><path d="M79 41q5-5 10 0"/>',
+ mobility:'<circle cx="58" cy="18" r="9"/><path d="M58 28v30M58 58L40 88M58 58l18 30M58 40L32 48M58 40l26 8M24 22q-8 8 0 16M92 22q8 8 0 16"/>'
+ };
+ return '<svg viewBox="0 0 120 110" aria-hidden="true"><line class="floor" x1="20" y1="98" x2="100" y2="98"/><g class="body">'+(a[k]||a.mobility)+'</g></svg>';
+}
+function strengthCards(w,withFields){
+ var ex=strengthExercises(w),logs=(w.log&&w.log.strength)||[];
+ return '<div class="exercisegrid">'+ex.map(function(x,i){var l=logs[i]||{};return '<div class="excard"><div class="exhead"><div class="expic">'+exerciseSvg(x[2])+'</div><div class="exmeta"><h4>'+esc(x[0])+'</h4><div class="expres">Meta: '+esc(x[1])+'</div><p class="extip"><b>Dica:</b> '+esc(exerciseTip(x[0]))+'</p></div></div>'+(withFields?'<div class="exfields"><div class="field"><label>Carga / nível</label><input id="load'+i+'" placeholder="Ex.: 40 kg" value="'+esc(l.load||'')+'"></div><div class="field"><label>Execução realizada</label><input id="result'+i+'" placeholder="Ex.: 8/8/7" value="'+esc(l.result||'')+'"></div><div class="field full"><label>Observação do exercício</label><input id="enote'+i+'" placeholder="Ex.: última série pesada" value="'+esc(l.note||'')+'"></div></div>':'')+'</div>'}).join('')+'</div>';
+}
+function strengthLog(w){
+ return strengthExercises(w).map(function(x,i){return {name:x[0],prescription:x[1],load:(document.getElementById('load'+i)||{}).value||'',result:(document.getElementById('result'+i)||{}).value||'',note:(document.getElementById('enote'+i)||{}).value||''}})
+}
+function logPrimary(w){
+ if(w.type==='strength'){var n=((w.log&&w.log.strength)||[]).filter(function(x){return x.load||x.result||x.note}).length;return n?n+' exercícios':'musculação'}
+ return w.log&&w.log.km?esc(w.log.km)+' km':'corrida'
+}
+function logSecondary(w){
+ if(w.type==='strength') return 'RPE '+esc((w.log&&w.log.rpe)||'—');
+ return esc((w.log&&w.log.pace)||'sem pace')
+}
+
+function bindWork(){document.querySelectorAll('.openwork').forEach(function(b){b.onclick=function(){openWork(b.dataset.id)}})}
+
+function openWork(id){
+ var w=data.workouts.find(function(x){return x.id===id});if(!w)return;
+ var l=w.log||{},isStrength=w.type==='strength';
+ if(isStrength){
+  dlg.innerHTML='<form method="dialog" class="modalbox"><div class="eyebrow">'+types[w.type]+' • '+fmt(w.date)+'</div><h2>'+esc(w.title)+'</h2><p class="muted">'+esc(w.summary)+'</p><div class="muscle-note">Cada exercício tem uma referência visual, uma dica curta e seu próprio registro. A prioridade é boa execução; não é necessário treinar até a falha.</div>'+strengthCards(w,true)+'<hr class="sep"><div class="formrow"><div class="field"><label>Esforço percebido — RPE 1–10</label><input id="wrpe" type="number" min="1" max="10" value="'+esc(l.rpe||'')+'"></div><div class="field"><label>Dor ou desconforto?</label><select id="wpain"><option value="">Não</option><option value="sim" '+(l.pain?'selected':'')+'>Sim</option></select></div></div><div class="field"><label>Observações gerais</label><textarea id="wnote">'+esc(l.note||'')+'</textarea></div><div class="actions"><button value="cancel" class="btn alt">Cancelar</button><button type="button" id="savework" class="btn">Salvar musculação</button></div></form>';
+  dlg.showModal();
+  document.getElementById('savework').onclick=function(){w.log={strength:strengthLog(w),rpe:document.getElementById('wrpe').value,pain:document.getElementById('wpain').value==='sim',note:document.getElementById('wnote').value};w.status='done';save();dlg.close();nav()}
+ }else{
+  dlg.innerHTML='<form method="dialog" class="modalbox"><div class="eyebrow">'+types[w.type]+' • '+fmt(w.date)+'</div><h2>'+esc(w.title)+'</h2><p class="muted">'+esc(w.summary)+'</p><hr class="sep"><div class="formrow"><div class="field"><label>Distância realizada (km)</label><input id="wkm" type="number" step=".1" value="'+esc(l.km||'')+'"></div><div class="field"><label>Pace médio (min/km)</label><input id="wpace" placeholder="5:20" value="'+esc(l.pace||'')+'"></div></div><div class="formrow"><div class="field"><label>Esforço percebido — RPE 1–10</label><input id="wrpe" type="number" min="1" max="10" value="'+esc(l.rpe||'')+'"></div><div class="field"><label>Dor ou desconforto?</label><select id="wpain"><option value="">Não</option><option value="sim" '+(l.pain?'selected':'')+'>Sim</option></select></div></div><div class="field"><label>Observações</label><textarea id="wnote">'+esc(l.note||'')+'</textarea></div><div class="actions"><button value="cancel" class="btn alt">Cancelar</button><button type="button" id="savework" class="btn">Salvar treino</button></div></form>';
+  dlg.showModal();
+  document.getElementById('savework').onclick=function(){w.log={km:document.getElementById('wkm').value,pace:document.getElementById('wpace').value,rpe:document.getElementById('wrpe').value,pain:document.getElementById('wpain').value==='sim',note:document.getElementById('wnote').value};w.status='done';save();dlg.close();nav()}
+ }
+}
+function newRace(){
+ dlg.innerHTML='<form method="dialog" class="modalbox"><div class="eyebrow">NOVO CICLO</div><h2>Próxima prova</h2><div class="field"><label>Nome</label><input id="rname" value="Próxima prova"></div><div class="formrow"><div class="field"><label>Distância</label><select id="rdist"><option value="5">5 km</option><option value="10">10 km</option><option value="21.1" selected>21,1 km</option><option value="42.2">42,2 km</option></select></div><div class="field"><label>Data</label><input id="rdate" type="date"></div></div><div class="field"><label>Meta de tempo (h:mm:ss)</label><input id="rgoal" placeholder="1:45:00"></div><hr class="sep"><div class="eyebrow">REFERÊNCIA OPCIONAL</div><div class="formrow"><div class="field"><label>Distância da prova recente</label><select id="recentd"><option value="">Nenhuma</option><option value="5">5 km</option><option value="10">10 km</option><option value="21.1">21,1 km</option><option value="42.2">42,2 km</option></select></div><div class="field"><label>Tempo recente</label><input id="recentt" placeholder="0:48:20"></div></div><div class="actions"><button value="cancel" class="btn alt">Cancelar</button><button type="button" id="calc" class="btn">Calcular ciclo</button></div></form>';
+ dlg.showModal();document.getElementById('calc').onclick=calculateRace
+}
+function qualityText(dist,target,w,phase){
+ var t=tsec(target)/dist,qp=t;
+ if(dist<=5)qp=t-8;else if(dist===10)qp=t-4;else qp=t+5;
+ if(phase==='Base')qp+=12;if(phase==='Taper')qp+=5;
+ var reps=w<3?'4×800 m':w<6?'4×1 km':'3×2 km';
+ if(dist>=21.1&&w>=5)reps='3×2 km';
+ return reps+' @ ~'+pace(qp)+'/km';
+}
+function weekMonday(s){
+ var d=pdate(s);d.setDate(d.getDate()-((d.getDay()+6)%7));return iso(d)
+}
+function planForRace(r){
+ var startMon=weekMonday(todayISO()),raceMon=weekMonday(r.date);
+ var weeks=Math.floor((pdate(raceMon)-pdate(startMon))/(7*DAY))+1;
+ weeks=Math.max(1,weeks);
+ var out=[],baseKm=Number(data.profile.weeklyKm)||30,baseLong=Number(data.profile.longRunKm)||10;
+ var dist=Number(r.distance),goal=r.goal,maxLong=dist===5?10:dist===10?14:dist===21.1?20:32;
+ for(var i=1;i<=weeks;i++){
+  var left=weeks-i,phase=left===0?'Taper':left===1?'Taper':i<=Math.max(2,Math.floor(weeks*.28))?'Base':left<=Math.max(3,Math.floor(weeks*.35))?'Específica':'Construção';
+  var factor=1+Math.min(i-1,6)*.055;if(i%4===0&&left>1)factor*=.82;if(phase==='Taper')factor*=left===0?.48:.72;
+  var vol=Math.max(12,Math.round(baseKm*factor));
+  var lng=Math.min(maxLong,Math.max(baseLong,Math.round(baseLong+(maxLong-baseLong)*Math.min(1,i/Math.max(3,weeks-2)))));
+  if(i%4===0&&left>1)lng=Math.round(lng*.82);if(left===1)lng=Math.min(lng,Math.round(maxLong*.65));
+  var wd=add(startMon,(i-1)*7);
+  if(left===0){
+   var finalSessions=[
+    {date:add(r.date,-6),type:'strength',title:'Mobilidade + core',summary:'Sessão leve; sem musculação pesada de pernas'},
+    {date:add(r.date,-4),type:'quality',title:'Ativação • Taper',summary:qualityText(dist,goal,i,'Taper')+' • volume curto e sem forçar'},
+    {date:add(r.date,-2),type:'easy',title:'Corrida leve + acelerações',summary:(dist<=10?'4–5':'5–6')+' km leve + 3 acelerações curtas'},
+    {date:r.date,type:'race',title:r.name,summary:String(dist).replace('.',',')+' km • meta '+goal+' • '+pace(tsec(goal)/dist)+'/km'}
+   ];
+   finalSessions.forEach(function(x){if(x.date>=todayISO()&&x.date<=r.date)out.push({id:uid(),date:x.date,week:i,type:x.type,title:x.title,summary:x.summary,status:'planned'})});
+  }else{
+   out.push({id:uid(),date:add(wd,1),week:i,type:'strength',title:'Força principal',summary:phase==='Taper'?'Volume reduzido; sem chegar à falha':main,status:'planned'});
+   out.push({id:uid(),date:add(wd,2),week:i,type:'quality',title:'Qualidade • '+phase,summary:qualityText(dist,goal,i,phase)+' • aquecer e desacelerar 10–15 min',status:'planned'});
+   out.push({id:uid(),date:add(wd,3),week:i,type:'strength',title:'Força complementar',summary:phase==='Taper'?'Mobilidade e força leve':comp,status:'planned'});
+   out.push({id:uid(),date:add(wd,5),week:i,type:'easy',title:'Corrida leve',summary:Math.max(4,Math.round(vol*.22))+' km confortável • ~'+pace(tsec(goal)/dist+65)+'/km',status:'planned'});
+   out.push({id:uid(),date:add(wd,6),week:i,type:'long',title:'Longão',summary:lng+' km confortável'+(phase==='Específica'?' • últimos km progressivos conforme controle':''),status:'planned'});
+  }
+ }
+ return out.filter(function(w){return w.date<=r.date}).map(function(w){w.raceId=r.id;return w}).sort(function(a,b){return a.date.localeCompare(b.date)});
+}
+function repairActivePlan(){
+ var r=race();if(!r||!r.date)return;
+ var current=data.workouts.filter(function(w){return w.raceId===r.id});
+ if(!current.length){
+  data.workouts=data.workouts.concat(planForRace(r));save();return;
+ }
+ var exact=current.some(function(w){return w.type==='race'&&w.date===r.date});
+ var after=current.some(function(w){return w.date>r.date});
+ if(exact&&!after)return;
+ var fresh=planForRace(r);
+ fresh.forEach(function(n){
+  var prior=current.find(function(o){return o.date===n.date&&o.type===n.type});
+  if(prior&&prior.log){n.log=prior.log;n.status=prior.status}
+ });
+ data.workouts=data.workouts.filter(function(w){return w.raceId!==r.id}).concat(fresh);save();
+}
+function calculateRace(){
+ var name=document.getElementById('rname').value||'Próxima prova',dist=Number(document.getElementById('rdist').value),date=document.getElementById('rdate').value,goal=document.getElementById('rgoal').value;
+ if(!date||!tsec(goal)){alert('Informe data e meta de tempo.');return}
+ var calendarWeeks=Math.floor((pdate(weekMonday(date))-pdate(weekMonday(todayISO())))/(7*DAY))+1;
+ if(days(todayISO(),date)<28)alert('Há menos de 4 semanas até essa prova. O app vai montar um ciclo curto, sem progressão agressiva.');
+ var rid='r'+uid(),r={id:rid,name:name,date:date,distance:dist,goal:goal,status:'active'};
+ var out=planForRace(r);
+ var rd=Number(document.getElementById('recentd').value),rt=document.getElementById('recentt').value,msg='';
+ if(rd&&tsec(rt)){var predicted=tsec(rt)*Math.pow(dist/rd,1.06),delta=(predicted-tsec(goal))/predicted*100;msg='Equivalência pela prova recente: aproximadamente '+formatTime(predicted)+'. ';msg+=delta>8?'A meta escolhida é mais de 8% mais rápida que essa referência; trate-a como meta de aproximação, não garantia.':'A meta está relativamente próxima da referência recente.'}
+ data.races.forEach(function(x){x.status='future'});data.races.push(r);data.active=rid;data.workouts=data.workouts.filter(function(w){return w.raceId!==rid}).concat(out);save();dlg.close();route='plan';nav();if(msg)alert(msg)
+}
+function formatTime(s){s=Math.round(s);var h=Math.floor(s/3600),m=Math.floor((s%3600)/60),x=s%60;return h+':'+String(m).padStart(2,'0')+':'+String(x).padStart(2,'0')}
+document.querySelectorAll('.nav button').forEach(function(b){b.onclick=function(){route=b.dataset.r;nav()}});
+var deferred,ib=document.getElementById('install');window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;ib.classList.remove('hidden')});ib.onclick=function(){if(deferred){deferred.prompt();deferred=null;ib.classList.add('hidden')}};
+if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(function(){});
+ensureWorkoutRaceIds();
+repairActivePlan();
+nav()
+})();
+</script>
+</body>
+</html>
