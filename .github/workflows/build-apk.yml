@@ -40,11 +40,11 @@ jobs:
         run: gradle --no-daemon :app:bundleRelease
 
       - name: Rename bundle
-        run: cp app/build/outputs/bundle/release/app-release.aab NextRace-v1.3.0-unsigned.aab
+        run: cp app/build/outputs/bundle/release/app-release.aab NextRace-v1.3.1-unsigned.aab
 
       - name: Upload unsigned bundle
         uses: actions/upload-artifact@v4
         with:
-          name: NextRace-Play-v1.3.0-unsigned
-          path: NextRace-v1.3.0-unsigned.aab
+          name: NextRace-Play-v1.3.1-unsigned
+          path: NextRace-v1.3.1-unsigned.aab
           if-no-files-found: error
