@@ -1,4 +1,4 @@
-name: Build NextRace APK
+name: Build NextRace unsigned APK
 
 on:
   push:
@@ -36,35 +36,15 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Restore stable debug signing key
-        uses: actions/cache@v4
-        with:
-          path: ~/.android/debug.keystore
-          key: nextrace-debug-signing-v1
+      - name: Build unsigned release APK
+        run: gradle --no-daemon :app:assembleRelease
 
-      - name: Create signing key if needed
-        shell: bash
-        run: |
-          mkdir -p "$HOME/.android"
-          if [ ! -f "$HOME/.android/debug.keystore" ]; then
-            keytool -genkeypair -v \
-              -keystore "$HOME/.android/debug.keystore" \
-              -storepass android \
-              -alias androiddebugkey \
-              -keypass android \
-              -dname "CN=NextRace Android,O=NextRace,C=BR" \
-              -keyalg RSA -keysize 2048 -validity 10000
-          fi
+      - name: Rename unsigned APK
+        run: cp app/build/outputs/apk/release/app-release-unsigned.apk NextRace-v1.2.0-unsigned.apk
 
-      - name: Build debug APK
-        run: gradle --no-daemon :app:assembleDebug
-
-      - name: Rename APK
-        run: cp app/build/outputs/apk/debug/app-debug.apk NextRace-v1.1.2.apk
-
-      - name: Upload APK
+      - name: Upload unsigned APK
         uses: actions/upload-artifact@v4
         with:
-          name: NextRace-APK-v1.1.2
-          path: NextRace-v1.1.2.apk
+          name: NextRace-unsigned-v1.2.0
+          path: NextRace-v1.2.0-unsigned.apk
           if-no-files-found: error
